@@ -1,5 +1,6 @@
 // find 2 arrays union
 // use map as it doesn't allow duplicates 
+// return the distinct values in the union set
 // this takes time O(n+m)
 
 class Solution{
@@ -17,10 +18,13 @@ class Solution{
             mp.insert({b[i], i});
         }
         
+        int count = 0;
         for(auto it=mp.begin(); it!=mp.end(); it++)
         {
-            cout<<it->first<<" ";
+            // cout<<it->first<<" ";
+            count++;
         }
+        return count;
     }
    
 };
